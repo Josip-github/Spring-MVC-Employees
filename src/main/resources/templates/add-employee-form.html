@@ -9,9 +9,18 @@
               crossorigin="anonymous">
     </head>
     <body>
-    <div class="container">
 
-    </div>
+        <div class="container">
+
+            <h2>Add Employee</h2>
+            <hr>
+            <form th:action="@{/saveEmployee}" th:object="${employee}" method="POST">
+
+
+
+            </form>
+
+        </div>
 
     </body>
 </html>
