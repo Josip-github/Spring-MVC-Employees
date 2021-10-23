@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>File Upload / Download</title>
+    </head>
+    <body>
+        <div>
+            <h2>List Employees</h2>
+            <hr>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="employee : ${employees}">
+                        <td th:text="${employee.name}"></td>
+                        <td th:text="${employee.email}"></td>
+                        <td th:text="${employee.department}"></td>
+                    </tr>
+                </tbody>
+
+
+
+            </table>
+        </div>
+
+    </body>
+</html>
