@@ -22,4 +22,12 @@ public class EmployeeController {
         mav.addObject("employees", list);
         return mav;
     }
+
+    @GetMapping("/addEmployeeForm")
+    public ModelAndView addEmployeeForm(){
+        ModelAndView mav = new ModelAndView("add-employee-form");
+        Employee newEmployee = new Employee();
+        mav.addObject("employee", newEmployee);
+        return mav;
+    }
 }
