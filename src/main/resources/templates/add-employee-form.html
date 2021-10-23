@@ -16,7 +16,7 @@
             <hr>
             <form th:action="@{/saveEmployee}" th:object="${employee}" method="POST">
 
-
+                <input type="text" th:field="*{name}" placeholder="Enter name" class="form-control col-4 mb-4">
 
             </form>
 
