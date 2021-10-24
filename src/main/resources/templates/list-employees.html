@@ -16,7 +16,7 @@
             <h2>List Employees</h2>
             <hr>
             <a th:href="@{/addEmployeeForm}" class="btn btn-primary mb-2">Add Employee</a>
-            <table class="table table-bordered table-striped">
+            <table class="table table-bordered table-striped" id="employee-table">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -43,5 +43,10 @@
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.js"></script>
+        <script>
+            $(document).ready(function (){
+                $("#employee-table").DataTable();
+            })
+        </script>
     </body>
 </html>
