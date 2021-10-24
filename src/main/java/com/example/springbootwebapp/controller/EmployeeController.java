@@ -47,4 +47,10 @@ public class EmployeeController {
         mav.addObject("employee", employee);
         return mav;
     }
+
+    @GetMapping("/deleteEmployee")
+    public String deleteEmployee(@RequestParam Long employeeId){
+        employeeRepository.deleteById(employeeId);
+        return "redirect:/list";
+    }
 }
